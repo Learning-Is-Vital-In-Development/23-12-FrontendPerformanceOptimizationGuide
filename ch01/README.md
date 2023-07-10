@@ -1,1 +1,98 @@
 # 1장 블로그 서비스 최적화
+
+## 분석 퉅 소개
+
+- 크롬 개발자 도구
+  - 크롬 개발자 도구의 네트워크 패널
+  - 크롬 개발자 도구의 performance 패널
+  - 크롬 개발자 도구의 LightHouse 패널
+- webpack-bundle-analyzer
+
+### 1장 서비스 실행
+
+- npm install
+
+- npm run start
+
+- npm run server
+
+- npm run serve
+
+## 코드 분석
+
+- removeSpecialCharacter
+
+  - 매개변수로 넘어온 문자열에서 일부 특수문자를 제거 하는 함수
+
+- getParametersForUnsplash
+  - 이미지 사이트에서 이미지를 가져오는데 필요한 옵션을 설정하는 함수
+
+## LigthHouse
+
+### Mode
+
+- Navigation : 기본 값으로, 초기 페이지 로딩 시 발생하는 성능 문제를 분석
+- TimeSpan : 사용자가 정의한 시간 동안 발생한 성능 문제를 분석
+- SnapShot : 현재 상태의 성능 문제를 분석
+
+### Categories
+
+- Performance : 웹 페이지의 로딩 과정에서 발생하는 성능 문제를 분석
+- Accessibility : 서비스의 사용자 접근성 문제를 분석
+- Best practice : 웹사이트의 보안 측면과 웹 개발의 최신 표준에 중점을 두고 분석
+- SEO : 검색 엔진에서 얼마나 잘 크롤링되고 검색 결과에 표시되는지 분석
+- Progressive Web App : 서비스 워커와 오프라인 동작 등 ,PWA와 관련된 문제를 분석
+
+## 포인트
+
+1. 이미지 사이즈 최적화
+
+   > 120 x 120 이라고 해서 맞는 단순히 맞는 사이즈를 사용하는게 아니라 240 x 240 로 줄여서 최적화 해야 한다.
+
+   > 소비자와 가까운 곳에 콘텐츠 서버를 두는 기술 CDN을 통해서 해결할 수 있다.
+
+   > getParametersForUnsplash 함수에서 반환하는 쿼리스트링을 붙여서 https://~~ 로 width, height, quality, format, 전달
+
+최적화 후에 점수가 오름.
+
+2. 병목 코드 최적화
+
+   > 차트 보는 법 생각보다 헷갈리고 복잡했다. 눈에 익숙해질 때까지 연습해보자.
+
+   > timings 섹션에 ArticleList 항목에 실행시간이 매우 느리다. removeSpecialCharacter 함수에 문제가 있음 .
+
+   > 각 문자마다 반복문을 돌려 본문에서 일치하는 경우를 찾고, 다시 제거 하고 합치기 위해 substring과 concat 메서드를 사용 -> 비효율적
+
+   > replace함수와 정규표현식 이용
+
+3. 코드 분할 & 지연 로딩
+
+   > npm install --save-dev cra-bundler-analyzer
+
+   > npx cra-bundle-analyzer
+
+   > package-lock.json 에서 refactor 패키지에 대한 내용을 찾고 필요 없기 때문에 삭제함
+
+   > import {add} form "./math"
+
+   > import('add').then((module)=> {
+   > const {add} = module
+   > console.log('1+4=', add(1,4))
+   > })
+   > <br/>
+   > -> 프로미스 사용
+
+   > Suspense와 fallback 컴포넌트 사용
+
+4. 텍스트 압축
+
+   > 프로덕션 환경과 디벨롭 환경은 다르다.
+
+   > script에서 -u 를 제거
+
+## 알게 된 것
+
+1. 동적 import 에 대해 알게 되었다.
+2. Suspense는 예전에 리액트 공부할 때 써봤던 적이 있었지만 쓸 일이 없어서 한동안 잊고 지냈는데 이번 기회에 다시 써봐서 재밌었다.
+3. 텍스트 -> html, css, javascript 파일 크기가 성능에 영향을 준다는 것은 알고 있었지만 어느 정도일지는 몰랐는데 실제로 체감하게 되어서 앞으로 신경 쓰게 될 것 같다.
+4. removeSpecialCharacter() 와 같은 함수.. 코드 잘못 짜면 회사에서 엄청나게 까이겠구나 생각이 들었다. 자바스크립트 열심히 공부해서 좋은 코드를 짜는 개발자가 되어야겠다고 생각했다.
