@@ -21,7 +21,7 @@
 
 **[컴포넌트 사전 로딩]**
 
-4. 모달이 mount 되는 시점에 image가 업로드 되자 않은 상태일 때 모달이 작아지는데 다들 어떻게 처리하고 계신가요?
+4. 모달이 mount 되는 시점에 image가 업로드 되지 않은 상태일 때 모달이 작아지는데 다들 어떻게 처리하고 계시는가요?
 
 **[꼬리 질문]**
 
@@ -57,7 +57,7 @@
 
 **[꼬리 질문]**
 
-13. useEffect와 useLayoutEffect에 차이에 대해 토론했어요. 하지만 왜 react 18 버전 이후, useLayoutEffect를 볼 수 없던 이유가 무엇일까요?
+13. useEffect와 useLayoutEffect에 차이에 관해 토론했어요. 하지만 왜 react 18 버전 이후, useLayoutEffect를 볼 수 없던 이유가 무엇일까요?
 
 **[꼬리 질문]**
 
@@ -80,6 +80,8 @@
 
 18. 마우스 이벤트의 차이를 아시나요? (mouseOver, mouseOut) vs(mouseEnter/ mouseLeave)
 
-**[꼬리 질문]**
+**[컴포넌트 로딩 관련 질문]**
 
-19.dfafe
+19. css와js를 활용하여 성능을 개선할 수 있지만 브라우저에서도 script tag로 할 수 있는데 혹시 아시나요?
+
+20. link에 rel attribute로 우선 순위 지정이 가능한데 아시나요?
