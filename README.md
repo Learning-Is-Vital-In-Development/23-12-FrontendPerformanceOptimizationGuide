@@ -6,14 +6,16 @@
 
 ## 핵심 스터디 결과물
 
-- [핵심 결과물 링크를 추가해주세요](https://github.com/Learning-Is-Vital-In-Development)
-1. [핵심 결과물 링크를 추가해주세요](https://github.com/Learning-Is-Vital-In-Development)
+- [1주차](https://github.com/Learning-Is-Vital-In-Development/23-12-FrontendPerformanceOptimizationGuide/blob/main/ch01/README.md)
+- [2주차](https://github.com/Learning-Is-Vital-In-Development/23-12-FrontendPerformanceOptimizationGuide/blob/main/ch02/README.md)
+- [3주차](https://github.com/Learning-Is-Vital-In-Development/23-12-FrontendPerformanceOptimizationGuide/blob/main/ch02/README.md)
+- [4주차](https://github.com/Learning-Is-Vital-In-Development/23-12-FrontendPerformanceOptimizationGuide/blob/main/ch02/README.md)
 
 ## 진행방식
 
 - 매주 '프론트엔드 성능 최적화 가이드' 한 장씩 읽습니다.
 - 읽고 정리한 내용과 논의할 내용/질문 등을 작성하여 PR을 올립니다.
-- 스터디 시간에는 1~2명을 추첨하여 발표를 한 후, 준비한 질문들을 가지고 논의를 진행합니다.
+- 스터디 시간에는 준비한 질문들을 가지고 논의를 진행합니다.
 
 ## 스터디 규칙
 
