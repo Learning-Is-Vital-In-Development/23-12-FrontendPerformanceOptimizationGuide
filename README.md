@@ -8,8 +8,8 @@
 
 - [1주차](https://github.com/Learning-Is-Vital-In-Development/23-12-FrontendPerformanceOptimizationGuide/blob/main/ch01/README.md)
 - [2주차](https://github.com/Learning-Is-Vital-In-Development/23-12-FrontendPerformanceOptimizationGuide/blob/main/ch02/README.md)
-- [3주차](https://github.com/Learning-Is-Vital-In-Development/23-12-FrontendPerformanceOptimizationGuide/blob/main/ch02/README.md)
-- [4주차](https://github.com/Learning-Is-Vital-In-Development/23-12-FrontendPerformanceOptimizationGuide/blob/main/ch02/README.md)
+- [3주차](https://github.com/Learning-Is-Vital-In-Development/23-12-FrontendPerformanceOptimizationGuide/blob/main/ch03/README.md)
+- [4주차](https://github.com/Learning-Is-Vital-In-Development/23-12-FrontendPerformanceOptimizationGuide/blob/main/ch04/README.md)
 
 ## 진행방식
 
