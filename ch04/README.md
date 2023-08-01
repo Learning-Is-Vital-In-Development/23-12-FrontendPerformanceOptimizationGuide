@@ -73,13 +73,16 @@ JS 엔진이 해당 실행 컨텍스트를 평가하는 과정에서 함수를 �
 굳이 heap에 함수 공간을 차지하는 메모리를 잡아서 할 이유가 없습니다.
 실제로 저는 해당 기법을 써본 적은 없지만, 보통 비싼 비용의 계산이 들거나 localStorage의 접근, 배열을 사전에 조작하는 연산, new Date() 등에 활용하는 것 같습니다.
 마지막 참고로 이런 코드를 사용할 수도 있을 것 같습니다.
+```ts
 const [counter, setCounter] = useState(() => Math.floor(Math.random() * 16));
-[레퍼런스 1] - [React 공식 문서](https://reactjs.org/docs/hooks-reference.html#lazy-initial-state)
-[레퍼런스 2] - [[React] Lazy Initializing를 사용해 최적화](https://satisfactoryplace.tistory.com/277)
-[레퍼런스 3] - [리액트의 useState와 lazy initialization](https://yceffort.kr/2020/10/IIFE-on-use-state-of-react)
-[레퍼런스 4] - [[Hook 시리즈] Lazy initialization 이 대체 뭔데 그래서](https://velog.io/@samkong/Lazy-initialization)
-[레퍼런스 5] - [ReactJS useState Hook - lazy initialization and previous state](https://blog.greenroots.info/react-hook-usestate-lazy-initialization-previous-state)
-[공식문서](https://legacy.reactjs.org/docs/hooks-reference.html#lazy-initial-state)
+```
+
+- [레퍼런스 1] - [React 공식 문서](https://reactjs.org/docs/hooks-reference.html#lazy-initial-state)
+- [레퍼런스 2] - [[React] Lazy Initializing를 사용해 최적화](https://satisfactoryplace.tistory.com/277)
+- [레퍼런스 3] - [리액트의 useState와 lazy initialization](https://yceffort.kr/2020/10/IIFE-on-use-state-of-react)
+- [레퍼런스 4] - [[Hook 시리즈] Lazy initialization 이 대체 뭔데 그래서](https://velog.io/@samkong/Lazy-initialization)
+- [레퍼런스 5] - [ReactJS useState Hook - lazy initialization and previous state](https://blog.greenroots.info/react-hook-usestate-lazy-initialization-previous-state)
+- [공식문서](https://legacy.reactjs.org/docs/hooks-reference.html#lazy-initial-state)
 
 ## 병목 코드 최적화
 
